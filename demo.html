@@ -38,9 +38,27 @@ This is the accompanying web page for the following paper:<br>
 Submitted to ISMIR 2017</a>
 </ul>
 
+        <h3>Abstract</h3>
+
+This paper presents a fast and accurate alignment method for polyphonic symbolic music signals. It is known that to accurately align piano performances, methods using the voice structure are needed. However, such methods typically have high computational cost and they are applicable only when prior voice information is given. It is pointed out that alignment errors are typically accompanied by performance errors in the aligned signal. This suggests the possibility of  correcting (or <strong>realigning</strong>) preliminary results by a fast (but not-so-accurate) alignment method with a refined method applied to limited segments of aligned signals, to save the computational cost. To realise this, we develop a method for detecting performance errors and a realignment method that works fast and accurately in local regions around performance errors. To remove the dependence on prior voice information, voice separation is performed to the reference signal in the local regions. By applying our method to results obtained by previously proposed hidden Markov models, the highest accuracies are achieved with short computation time. Our source code is published in the accompanying web page, together with a user interface to examine and correct alignment results.
+<br>
+
+
         <h2>Source code</h2>
 
-You can <a href="codes.html"><strong><font color="#ff0080">download source code here</font></strong></a>.
+<h4>Alignment tool (C++)</h4>
+<a href="AlignmentTool.zip">AlignmentTool.zip</a> (86KB)<br>
+<h4>User interface (Qt code)</h4>
+<a href="AlignmentUI.zip">AlignmentUI.zip</a> (83KB)<br>
+<br>
+
+        <h2>Demonstrating examples</h2>
+
+<img src="images/fig_Overview.pdf" align=center width="450" alt="Picture" style="background-color:white;"/>
+
+<br>
+
+More examples coming soon...
 
     <!-- FOOTER  -->
 
