@@ -10,7 +10,6 @@
 
     <style>
       ul.pub {line-height: 20px;}
-      ul.pub li {margin-bottom: 10px;}
       ol.multi-column {float: left; width: 100%; line-height: 10px;}
       ol.multi-column li {float: left; width: 50%; margin-bottom: 10px;}
     </style>
@@ -38,13 +37,20 @@ This is the accompanying web page for the following paper:<br>
 Submitted to ISMIR 2017</a>
 </ul>
 
-        <h3>Abstract</h3>
-
-<img src="images/fig_Overview.pdf" align=right width="450" alt="Picture" style="background-color:white;"/>
-This paper presents a fast and accurate alignment method for polyphonic symbolic music signals. It is known that to accurately align piano performances, methods using the voice structure are needed. However, such methods typically have high computational cost and they are applicable only when prior voice information is given. It is pointed out that alignment errors are typically accompanied by performance errors in the aligned signal. This suggests the possibility of  correcting (or <strong>realigning</strong>) preliminary results by a fast (but not-so-accurate) alignment method with a refined method applied to limited segments of aligned signals, to save the computational cost. To realise this, we develop a method for detecting performance errors and a realignment method that works fast and accurately in local regions around performance errors. To remove the dependence on prior voice information, voice separation is performed to the reference signal in the local regions. By applying our method to results obtained by previously proposed hidden Markov models, the highest accuracies are achieved with short computation time. Our source code is published in the accompanying web page, together with a user interface to examine and correct alignment results.
+<br>
+<img src="images/fig_Overview.pdf" align=right width="400" alt="Picture" style="background-color:white;"/>
+<strong>Symbolic music alignment</strong> (or score-to-performance matching) is a technique to automatically match a note in a music performance to the corresponding note in the score.
+Our tool includes the currently <strong><font color="#007085">most accurate alignment algorithm</font></strong> and is provided with a <strong><font color="#007085">user interface to visualise the alignment result</font></strong> so that annotators can examine and correct it.
+The main alignment algorithm consists of three parts:
+<ul>
+<li>preliminary alignment by hidden Markov models (HMMs)
+<li>performance error detection
+<li>post-processing realignment by merged-output HMMs
+</ul>
+By detecting performance errors in the preliminary alignment result, the algorithm <font color="#f02882">automatically finds regions in the performance that can potentially contain alignment errors and corrects them by the realignment process</font>.
+<br>
 <br>
 
-<br>
         <h2>Source code</h2>
 
 <h4>Alignment tool (C++)</h4>
@@ -56,7 +62,6 @@ This paper presents a fast and accurate alignment method for polyphonic symbolic
 <h4>User interface (Qt code)</h4>
 <a href="AlignmentUI_v1.zip">AlignmentUI_v1.zip</a> (83KB)<br>
 <a href="manual_UI_v1.pdf">Manual</a> (PDF)<br>
-<br>
 <br>
 <br>
 <br>
