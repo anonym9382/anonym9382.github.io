@@ -40,6 +40,7 @@ Submitted to ISMIR 2017</a>
 
         <h3>Abstract</h3>
 
+<img src="images/fig_Overview.pdf" align=right width="450" alt="Picture" style="background-color:white;"/>
 This paper presents a fast and accurate alignment method for polyphonic symbolic music signals. It is known that to accurately align piano performances, methods using the voice structure are needed. However, such methods typically have high computational cost and they are applicable only when prior voice information is given. It is pointed out that alignment errors are typically accompanied by performance errors in the aligned signal. This suggests the possibility of  correcting (or <strong>realigning</strong>) preliminary results by a fast (but not-so-accurate) alignment method with a refined method applied to limited segments of aligned signals, to save the computational cost. To realise this, we develop a method for detecting performance errors and a realignment method that works fast and accurately in local regions around performance errors. To remove the dependence on prior voice information, voice separation is performed to the reference signal in the local regions. By applying our method to results obtained by previously proposed hidden Markov models, the highest accuracies are achieved with short computation time. Our source code is published in the accompanying web page, together with a user interface to examine and correct alignment results.
 <br>
 
@@ -66,11 +67,25 @@ This paper presents a fast and accurate alignment method for polyphonic symbolic
 
         <h2>Demonstrating examples</h2>
 
-<img src="images/fig_Overview.pdf" align=center width="450" alt="Picture" style="background-color:white;"/>
+As in examples above, the upper staffs represent the score information and the lower staffs represent the performance information. An alignment result by HMM is compared with a result after realignment by the merged-output HMM.
+
+
+<h4><font color="#1e1eb4">Example 1 from Chopin: Fantaisie Impromptu</font></h4>
+<img src="images/ex1.pdf" align=center height="450" alt="Picture" style="background-color:white;"/>
 
 <br>
+<h4><font color="#1e1eb4">Example 2 from Chopin: Scherzo No. 2</font></h4>
+<img src="images/ex2.pdf" align=center height="450" alt="Picture" style="background-color:white;"/>
 
-More examples coming soon...
+<br>
+<h4><font color="#1e1eb4">Example 3 from Brahms: Paganini Variations Book 2 Variation 9</font></h4>
+<img src="images/ex3.pdf" align=center height="450" alt="Picture" style="background-color:white;"/>
+
+<br>
+<h4><font color="#1e1eb4">Example 4 from Beethoven: Piano Sonata No. 23 'Appasionata' 1st Movement</font></h4>
+<img src="images/ex4.pdf" align=center height="450" alt="Picture" style="background-color:white;"/>
+
+<br>
 
     <!-- FOOTER  -->
 
